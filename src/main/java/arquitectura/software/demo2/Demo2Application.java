@@ -4,6 +4,7 @@ import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
 import ch.qos.logback.core.joran.spi.JoranException;
 import ch.qos.logback.core.util.StatusPrinter;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +22,8 @@ public class Demo2Application {
 		configurator.setContext(context);
 		context.reset();
 		try {
+			//ObjectMapper mapper = new ObjectMapper();
+
 			configurator.doConfigure("src/main/java/logback.xml");
 		} catch (JoranException e) {
 			throw new RuntimeException(e);

@@ -27,12 +27,9 @@ public class CurrencyBl {
         String result = response.body().string();
         System.out.println(result);
 
-        // Parsear el JSON
-/*
         ObjectMapper mapper = new ObjectMapper();
         CurrencyDto currencyDto = mapper.readValue(result, CurrencyDto.class);
         return currencyDto;
- */
-        return null;
+        //return null;
     }
 }

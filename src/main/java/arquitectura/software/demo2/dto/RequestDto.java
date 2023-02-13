@@ -7,6 +7,9 @@ public class RequestDto {
     private String to;
     private BigDecimal amount;
 
+    public RequestDto() {
+    }
+
     public RequestDto(String from, String to, BigDecimal amount) {
         this.from = from;
         this.to = to;
