@@ -1,0 +1,21 @@
+<configuration>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class ="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+
+            <fileNamePattern>/Users/User/OneDrive/Escritorio/Greco/2023/Arquitectura de Software/Logs/logs.%d{dd-MM-yyyy}.%i.txt</fileNamePattern>
+            <maxFileSize>1000Kb</maxFileSize>
+        </rollingPolicy>
+            <encoder>
+                <pattern>
+                    %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+                </pattern>
+
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
